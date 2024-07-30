@@ -1,0 +1,19 @@
+import { BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom'
+
+import Users from './users/pages/Users';
+import NewPlace from './places/pages/NewPlace';
+import './App.css';
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path='/' exact element={<Users />}/>
+        <Route path='/places/new' exact element={<NewPlace />}/>
+        <Route path='*' element={<Navigate to='/' replace/>}/>
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
