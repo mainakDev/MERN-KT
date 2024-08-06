@@ -10,3 +10,9 @@ const goalSchema = mongoose.Schema({
 })
 
 module.exports = mongoose.model('Goal',goalSchema);
+
+/*
+req.body = {text: 'value'}
+
+req.body.text
+*/
